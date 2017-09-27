@@ -1,0 +1,27 @@
+$tabActived: rgba(51, 136, 255, .15);
+
+.tab-select {
+    color: #333;
+    font-size: 12px;
+    vertical-align: middle;
+
+    &__title,
+    &__tab {
+        margin: 0 6px;
+        padding: 0 5px;
+        height: 20px;
+        line-height: 20px;
+        background-color: transparent;
+        display: inline-block;
+
+        &--active {
+            background-color: $tabActived;
+            color: #38f;
+        }
+    }
+
+    &__title {
+        padding: 0;
+        margin: 0;
+    }
+}
