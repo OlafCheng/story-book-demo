@@ -4,7 +4,6 @@
   "main": "index.jsx",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --content-base ./dist --inline",
     "dev": "webpack-dev-server --content-base ./dist --inline",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
