@@ -6,16 +6,6 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 
-/*
-    ./webpack.config.js
-*/
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-// const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-//   template: './dist/index.html',
-//   inject: 'body',
-// });
-
 module.exports = {
   entry: './src/index.jsx',
   output: {
@@ -85,5 +75,4 @@ module.exports = {
       },
     ],
   },
-  // plugins: [HtmlWebpackPluginConfig],
 };
