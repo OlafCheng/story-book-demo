@@ -1,6 +1,6 @@
 {
   "name": "story-book-app",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --content-base ./dist --inline",
@@ -19,6 +19,9 @@
     "@storybook/addon-knobs": "3.2.10",
     "@storybook/addon-links": "^3.2.10",
     "@storybook/react": "^3.2.10",
+    "@types/enzyme": "2.8.9",
+    "@types/jest": "21.1.1",
+    "@types/node": "8.0.31",
     "@types/react": "^16.0.5",
     "@types/react-dom": "^15.5.4",
     "awesome-typescript-loader": "^3.2.3",
@@ -31,6 +34,7 @@
     "babel-preset-react": "^6.24.1",
     "classnames": "^2.2.5",
     "css-loader": "^0.28.7",
+    "enzyme": "3.0.0",
     "eslint": "4.7.2",
     "eslint-config-airbnb": "15.1.0",
     "eslint-plugin-import": "2.7.0",
