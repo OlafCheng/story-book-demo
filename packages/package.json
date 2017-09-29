@@ -11,6 +11,12 @@
     "react",
     "component"
   ],
+  "files": [
+    "src/",
+    "asets/",
+    "lib/",
+    "css/"
+  ],
   "author": "Youzan Retail FE",
   "dependencies": {
     "@types/react": "^16.0.5",
