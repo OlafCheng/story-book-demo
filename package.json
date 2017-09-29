@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "webpack-dev-server --content-base ./dist --inline",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build": "lerna run build"
   },
   "keywords": [
     "react",

@@ -1,12 +1,6 @@
 /*
     ./webpack.config.js
 */
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './dist/index.html',
-  inject: 'body',
-});
 
 module.exports = {
   entry: './src/index.jsx',
@@ -77,5 +71,4 @@ module.exports = {
       },
     ],
   },
-  plugins: [HtmlWebpackPluginConfig],
 };
