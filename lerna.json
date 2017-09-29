@@ -1,7 +1,21 @@
 {
   "lerna": "2.2.0",
+  "commands": {
+    "publish": {
+      "ignore": [
+        "*.md",
+        ".npmrc",
+        "yarn.lock",
+        ".eslintrc",
+        ".eslintignore",
+        ".gitignore",
+        "__tests__/**",
+        "scripts/**"
+      ]
+    }
+  },
   "packages": [
     "packages/*"
   ],
-  "version": "0.0.0"
+  "version": "independent"
 }
