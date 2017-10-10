@@ -12,7 +12,9 @@
     "lint": "yarn lint-ts & yarn lint-js && yarn lint-style",
     "lint-ts": "tslint -c tslint.json ./src/**/*.ts",
     "lint-js": "eslint ./src/**/*.js packagges/*/__test__",
-    "lint-style": "styleint ./src/**/*.scss"
+    "lint-style": "stylelint ./src/**/*.scss",
+    "build:entry": "node ./scripts/build-entry.js",
+    "build:components": "node ./scripts/build-components"
   },
   "keywords": [
     "react",
@@ -28,8 +30,11 @@
   "dependencies": {
     "@types/react": "^16.0.5",
     "@types/react-dom": "^15.5.4",
+    "chalk": "2.1.0",
     "classnames": "^2.2.5",
-    "typescript": "^2.5.2"
+    "json-templater": "1.1.0",
+    "typescript": "^2.5.2",
+    "uppercamelcase": "3.0.0"
   },
   "description": "这是一个 React 业务组件库的脚手架 demo"
 }
