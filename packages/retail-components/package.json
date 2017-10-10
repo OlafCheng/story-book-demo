@@ -1,13 +1,18 @@
 {
   "name": "retail-components",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "MIT",
+  "main": "./lib/index.js",
   "scripts": {
     "dev": "webpack-dev-server --content-base ./dist --inline",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "build": "node ./scripts/build.js",
     "test": "./scripts/test.sh",
-    "build": "./scripts/build.sh"
+    "lint": "yarn lint-ts & yarn lint-js && yarn lint-style",
+    "lint-ts": "tslint -c tslint.json ./src/**/*.ts",
+    "lint-js": "eslint ./src/**/*.js packagges/*/__test__",
+    "lint-style": "styleint ./src/**/*.scss"
   },
   "keywords": [
     "react",

@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: 'retail-components-umd.js',
     library: 'retail-components.js',
-    libaryTarget: 'umd',
+    libraryTarget: 'umd',
     path: path.resolve(__dirname, 'lib'),
     umdNamedDefine: true
   },
@@ -48,9 +48,6 @@ module.exports = {
         enforce: 'pre',
         use: [
           {
-            loader: 'source-map-loader'
-          },
-          {
             loader: 'babel-loader',
             options: {
               presets: ['es2015', 'react']
@@ -62,16 +59,26 @@ module.exports = {
         test: /\.(sass|scss)$/,
         use: [
           {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
             loader: 'sass-loader'
           }
         ]
       }
     ]
-  }
+  },
+  externals: [
+    {
+      react: {
+        amd: 'react',
+        root: 'React',
+        commonjs2: 'react',
+        commonjs: 'react'
+      },
+      'react-dom': {
+        amd: 'react-dom',
+        root: 'ReactDOM',
+        commonjs2: 'react-dom',
+        commonjs: 'react-dom'
+      }
+    }
+  ]
 };

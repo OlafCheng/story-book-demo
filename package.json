@@ -6,7 +6,9 @@
     "dev": "webpack-dev-server --content-base ./dist --inline",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "bootstrap": "./scripts/bootstrap.sh"
   },
   "keywords": [
     "react",
@@ -57,5 +59,9 @@
     "typescript": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {
+    "chalk": "2.1.0",
+    "shelljs": "0.7.8"
   }
 }

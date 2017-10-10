@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo, setDefaults } from '@storybook/addon-info';
 
-import TabSelect from '../src/components/tab-select/tabselect.tsx';
+import { TabSelect } from '../packages/retail-components/src';
 
 // addon-info
 setDefaults({
@@ -22,26 +22,26 @@ setDefaults({
   maxPropsIntoLine: 1, // Max props to display per line in source code
   maxPropObjectKeys: 10,
   maxPropArrayLength: 10,
-  maxPropStringLength: 80,
+  maxPropStringLength: 80
 });
 
 const PAIRS = [
   {
     text: '订单',
-    value: 'TRADE',
+    value: 'TRADE'
   },
   {
     text: '提现',
-    value: 'WITHDRAW',
+    value: 'WITHDRAW'
   },
   {
     text: '充值',
-    value: 'RECHARGE',
+    value: 'RECHARGE'
   },
   {
     text: '订购',
-    value: 'BOOK',
-  },
+    value: 'BOOK'
+  }
 ];
 
 storiesOf('Tab Select', module)
@@ -55,13 +55,13 @@ storiesOf('Tab Select', module)
         onChange={() => {}}
         value="TRADE"
       />
-    )),
+    ))
   )
   .add(
     '无默认值-可以取消所有',
     withInfo('"name" 属性用于给 TabSelect 命名，便于一个页面内用到多个 TabSelect 时，更好处理事件')(() => (
       <TabSelect name="sort" title="分类：" pairs={PAIRS} onChange={() => {}} />
-    )),
+    ))
   )
   .add(
     '有默认值-不可以取消所有',
@@ -73,7 +73,7 @@ storiesOf('Tab Select', module)
         value="TRADE"
         cancle={false}
       />
-    )),
+    ))
   )
   .add('无默认值-不可以取消所有', () => (
     <TabSelect

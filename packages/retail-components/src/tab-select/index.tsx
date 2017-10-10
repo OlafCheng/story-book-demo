@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import './tabselect.scss';
+import './tab-select.scss';
 
 interface TabUnitProps {
   onClick?: (value: string) => void;
