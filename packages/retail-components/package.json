@@ -14,7 +14,7 @@
     "lint-js": "eslint ./src/**/*.js packagges/*/__test__",
     "lint-style": "stylelint ./src/**/*.scss",
     "build:entry": "node ./scripts/build-entry.js",
-    "build:components": "node ./scripts/build-components"
+    "build:components": "./scripts/build-components.sh"
   },
   "keywords": [
     "react",
@@ -28,13 +28,33 @@
   ],
   "author": "Youzan Retail FE",
   "dependencies": {
+    "@types/node": "8.0.31",
     "@types/react": "^16.0.5",
     "@types/react-dom": "^15.5.4",
     "chalk": "2.1.0",
     "classnames": "^2.2.5",
     "json-templater": "1.1.0",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.3.7",
+    "tslint": "^5.7.0",
+    "tslint-loader": "^3.5.3",
+    "tslint-react": "^3.2.0",
     "typescript": "^2.5.2",
-    "uppercamelcase": "3.0.0"
+    "node-sass": "^4.5.3",
+    "css-loader": "^0.28.7",
+    "babel-loader": "^7.1.2",
+    "awesome-typescript-loader": "^3.2.3",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "8.0.0",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "uppercamelcase": "3.0.0",
+    "webpack-merge": "4.1.0"
   },
-  "description": "这是一个 React 业务组件库的脚手架 demo"
+  "description": "这是一个 React 业务组件库的脚手架 demo",
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "1.0.0-beta.3"
+  }
 }

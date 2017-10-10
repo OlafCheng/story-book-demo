@@ -1,24 +1,34 @@
-/*
-    ./webpack.config.js
-*/
+// 更新 webpack.prod.config.js
+// 以便正常打包
+const components = require('./get-components')();
+const fs = require('fs');
+const render = require('json-templater/string');
+const uppercamelcase = require('uppercamelcase');
 const path = require('path');
 
+const ENTRY_TEMPLATE = `    '{{target}}': '{{source}}'`;
+const ENTRIES_TEMPLATE = `{
+{{entries}}
+  }`;
+const MAIN_TEMPLATE = `const path = require('path');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
 module.exports = {
-  entry: './src/index.js',
+  entry: {{entries}},
   output: {
-    filename: 'retail-components-umd.js',
-    library: 'retail-components.js',
-    libraryTarget: 'umd',
-    path: path.resolve(__dirname, 'lib'),
-    umdNamedDefine: true
+    filename: '[name].js',
+    path: path.resolve(__dirname, '../lib')
   },
+  plugins: [
+    new UglifyJSPlugin()
+  ],
   resolve: {
     extensions: ['.ts', '.tsx', '.jsx', '.js', 'json']
   },
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
+        test: /\\.(ts|tsx)$/,
         use: [
           {
             loader: 'tslint-loader'
@@ -31,7 +41,7 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.jsx$/,
+        test: /\\.jsx$/,
         exclude: /node_modules/,
         use: [
           {
@@ -43,7 +53,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.js$/,
+        test: /\\.js$/,
         exclude: /node_modules/,
         enforce: 'pre',
         use: [
@@ -56,7 +66,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(sass|scss)$/,
+        test: /\\.(sass|scss)$/,
         use: [
           {
             loader: 'sass-loader'
@@ -81,4 +91,26 @@ module.exports = {
       }
     }
   ]
-};
+};`;
+
+const entriesTemplate = [];
+
+components.forEach(obj => {
+  entriesTemplate.push(render(ENTRY_TEMPLATE, {
+    target: `${obj.dir}/${obj.index.split('\.')[0]}`,
+    source: `../src/${obj.dir}`
+  }))
+});
+
+const entries = render(ENTRIES_TEMPLATE, {
+  entries: entriesTemplate.join(',\n')
+})
+
+const entry = render(MAIN_TEMPLATE, {
+  entries
+})
+
+const OUTPUT_FILE = path.join(__dirname, '../config/webpack.prod.js')
+fs.writeFileSync(OUTPUT_FILE, entry);
+
+console.log('[update webpack config] DONE:' + OUTPUT_FILE);
