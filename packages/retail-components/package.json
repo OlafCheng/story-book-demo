@@ -34,7 +34,6 @@
     "chalk": "2.1.0",
     "classnames": "^2.2.5",
     "json-templater": "1.1.0",
-    "awesome-typescript-loader": "^3.2.3",
     "uppercamelcase": "3.0.0",
     "webpack-merge": "4.1.0",
     "uglifyjs-webpack-plugin": "1.0.0-beta.3"

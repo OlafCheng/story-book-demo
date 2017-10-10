@@ -15,7 +15,6 @@ const MAIN_TEMPLATE = `/**
  * 这份配置文件是由 ../scripts/update-webpack-config.js 生成的
  * 直接在这里修改会不生效
  */
-
  const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
@@ -34,26 +33,14 @@ module.exports = {
         test: /\\.tsx$/,
         use: [
           {
-            loader: 'tslint-loader'
+            loader: 'awesome-typescript-loader'
           },
           {
-            loader: 'awesome-typescript-loader'
+            loader: 'tslint-loader'
           }
         ],
         enforce: 'pre',
         exclude: /node_modules/
-      },
-      {
-        test: /\\.jsx$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['env', 'react']
-            }
-          }
-        ]
       },
       {
         test: /\\.js$/,
@@ -71,6 +58,9 @@ module.exports = {
       {
         test: /\\.(sass|scss)$/,
         use: [
+          {
+            loader: 'css-loader'
+          },
           {
             loader: 'sass-loader'
           }
