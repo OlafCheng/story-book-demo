@@ -10,15 +10,17 @@ function check_result {
   fi
 }
 
+echo $basepath
+
 # 删除 lib 文件夹
 rm -rf ../lib
 check_result
 
 # 更新 webpack 配置文件
-node update-webpack-config.js
+node $basepath/update-webpack-config.js
 check_result
 
 # 构建每个组件对应的 js 文件到 lib
-webpack --config ../config/webpack.prod.js --progress
+webpack --config $basepath/../config/webpack.prod.js --progress
 check_result
 echo [build:components] DONE\!

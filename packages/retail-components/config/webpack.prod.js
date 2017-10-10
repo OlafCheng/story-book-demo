@@ -1,24 +1,27 @@
-const path = require('path');
+/**
+ * 请不要直接在这里修改 webpack 配置文件
+ * 这份配置文件是由 ../scripts/update-webpack-config.js 生成的
+ * 直接在这里修改会不生效
+ */
+
+ const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: {
-    'tab-select/index': '../src/tab-select'
+    'tab-select/index': '/Users/olafcheng/Programs/Note/demos/story-book-app/packages/retail-components/src/tab-select'
   },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, '../lib')
   },
-  plugins: [
-    new UglifyJSPlugin()
-  ],
   resolve: {
     extensions: ['.ts', '.tsx', '.jsx', '.js', 'json']
   },
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.tsx$/,
         use: [
           {
             loader: 'tslint-loader'
@@ -80,5 +83,8 @@ module.exports = {
         commonjs: 'react-dom'
       }
     }
+  ],
+  plugins: [
+    new UglifyJSPlugin()
   ]
 };
