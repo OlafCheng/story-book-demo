@@ -7,14 +7,14 @@
 // to "React Create App". This only has babel loader to load JavaScript.
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: '../src/index.jsx',
   output: {
     filename: 'bundle.js',
-    path: `${__dirname}/dist`,
+    path: `${__dirname}/dist`
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['.ts', '.tsx', '.jsx', '.js', 'json'],
+    extensions: ['.ts', '.tsx', '.jsx', '.js', 'json']
   },
   module: {
     rules: [
@@ -22,11 +22,11 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         use: [
           {
-            loader: 'tslint-loader',
-          },
-          {
             loader: 'awesome-typescript-loader',
           },
+          {
+            loader: 'tslint-loader',
+          }
         ],
         enforce: 'pre',
         exclude: /node_modules/,
@@ -39,9 +39,9 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: ['env', 'react'],
-            },
-          },
-        ],
+            }
+          }
+        ]
       },
       {
         test: /\.js$/,
@@ -55,9 +55,9 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: ['env', 'react'],
-            },
-          },
-        ],
+            }
+          }
+        ]
       },
       {
         test: /\.(sass|scss)$/,
@@ -70,9 +70,9 @@ module.exports = {
           },
           {
             loader: 'sass-loader',
-          },
-        ],
-      },
-    ],
-  },
+          }
+        ]
+      }
+    ]
+  }
 };

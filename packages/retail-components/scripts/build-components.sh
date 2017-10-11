@@ -10,8 +10,6 @@ function check_result {
   fi
 }
 
-echo $basepath
-
 # 删除 lib 文件夹
 rm -rf ../lib
 check_result

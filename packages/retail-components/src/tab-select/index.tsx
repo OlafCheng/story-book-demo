@@ -17,8 +17,8 @@ const TabUnit = (params: TabUnitProps) => {
     if (onClick) {
       onClick(value);
     }
-    handleSwitchTab({ value, name })
-  }
+    handleSwitchTab({ value, name });
+  };
 
   const { text, active } = params;
   const actived = `${active ? 'tab-select__tab--active' : ''}`;
@@ -27,8 +27,8 @@ const TabUnit = (params: TabUnitProps) => {
     <span className={`tab-select__tab ${actived}`} onClick={handleClick}>
       {text}
     </span>
-  )
-}
+  );
+};
 
 interface ValueProps {
   value?: string;
@@ -54,7 +54,7 @@ interface TabState {
 export default class TabSelect extends React.Component<TabProps, TabState> {
   static defaultProps: Partial<TabProps> = {
     cancle: true
-  }
+  };
 
   state = {
     value: {
@@ -63,14 +63,14 @@ export default class TabSelect extends React.Component<TabProps, TabState> {
       text: ''
     },
     init: true
-  }
+  };
 
   handleSwitchTab = (value: ValueProps): void => {
     const { onChange } = this.props;
     let prevValue: string;
     if (this.state.init) {
       prevValue = this.props.value;
-      this.setState({ init: false })
+      this.setState({ init: false });
     } else {
       prevValue = this.state.value && this.state.value.value;
     }
@@ -88,7 +88,7 @@ export default class TabSelect extends React.Component<TabProps, TabState> {
         this.setState({ value: newValue }, () => onChange(newValue));
       }
     }
-  };
+  }
 
   render() {
     const { className, pairs, title, name, value: superValue } = this.props;
@@ -105,7 +105,9 @@ export default class TabSelect extends React.Component<TabProps, TabState> {
               key={index}
               name={name}
               handleSwitchTab={this.handleSwitchTab}
-              active={innerValue ? innerValue === pair.value : init && (superValue === pair.value)}
+              active={innerValue ?
+                innerValue === pair.value :
+                init && (superValue === pair.value)}
             />
           ))
         }

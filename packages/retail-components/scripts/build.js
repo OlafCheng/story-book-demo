@@ -28,6 +28,7 @@ const execFlow = (cmd) => {
 execFlow('lint');// lint
 execFlow('build:entry');// 构建入口文件
 execFlow('build:components');// 构建每个组件对应的 js 文件
-execFlow('build:css');// 构建每个组件对应的 CSS 文件
+// 因为现在是把 CSS 直接打到 JS 里，所以不需要单打打 CSS 了
+// execFlow('build:css');// 构建每个组件对应的 CSS 文件
 execFlow('build:retail-components');// 打包 js 文件，生成 umd 和压缩文件
 execFlow('build:style-entry');// 构建每个组件目录下的 style 入口

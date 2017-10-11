@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --content-base ./dist --inline",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./packages/retail-components/src -p 6006",
     "build-storybook": "build-storybook",
     "build": "lerna run build",
     "test": "lerna run test",

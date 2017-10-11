@@ -15,7 +15,7 @@ const MAIN_TEMPLATE = `/**
  * 这份配置文件是由 ../scripts/update-webpack-config.js 生成的
  * 直接在这里修改会不生效
  */
- const path = require('path');
+const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
@@ -109,4 +109,4 @@ const entry = render(MAIN_TEMPLATE, {
 const OUTPUT_FILE = path.join(__dirname, '../config/webpack.prod.js')
 fs.writeFileSync(OUTPUT_FILE, entry);
 
-console.log('[update webpack config] DONE:' + OUTPUT_FILE);
+console.log('[update webpack config] DONE: ' + OUTPUT_FILE);

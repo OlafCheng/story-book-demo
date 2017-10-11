@@ -6,6 +6,8 @@ module.exports = function() {
   const excludes = ['index.js', '.DS_Store'];
   const componentsDirs = dirs.filter(dir => excludes.indexOf(dir) === -1);
 
+  console.log(`Got components: ${componentsDirs.join(', ')}`);
+
   return componentsDirs.map(dir => {
     const files = fs.readdirSync(path.resolve(__dirname, `../src/${dir}`));
     const index = files.filter(fileName => fileName.indexOf('index') !== -1)[0];
