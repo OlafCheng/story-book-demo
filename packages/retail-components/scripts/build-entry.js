@@ -7,7 +7,7 @@ const path = require('path');
 const chalk = require('chalk');
 
 const OUTPUT_PATH = path.join(__dirname, '../src/index.js');
-const IMPORT_TEMPLATE = 'import {{name}} from \'./{{dir}}/{{index}}\';';
+const IMPORT_TEMPLATE = 'import {{name}} from \'{{dir}}\';';
 const MATIN_TEMPLATE = `{{include}}
 
 export default {

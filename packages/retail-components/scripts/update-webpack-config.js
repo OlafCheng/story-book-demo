@@ -17,6 +17,9 @@ const MAIN_TEMPLATE = `/**
  */
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const createAlias = require('./createAlias');
+
+console.log(createAlias(path.resolve(__dirname, '../src')));
 
 module.exports = {
   entry: {{entries}},
@@ -25,7 +28,8 @@ module.exports = {
     path: path.resolve(__dirname, '../lib')
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.jsx', '.js', 'json']
+    extensions: ['.ts', '.tsx', '.jsx', '.js', 'json'],
+    alias: createAlias(path.resolve(__dirname, '../src'))
   },
   module: {
     rules: [

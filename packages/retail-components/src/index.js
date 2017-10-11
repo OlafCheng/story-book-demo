@@ -1,5 +1,5 @@
-import TabSelect from './tab-select/index.tsx';
+import TabSelect from 'tab-select';
 
-export {
+export default {
   TabSelect
 };
