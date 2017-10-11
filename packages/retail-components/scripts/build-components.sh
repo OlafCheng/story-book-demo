@@ -11,7 +11,7 @@ function check_result {
 }
 
 # 删除 lib 文件夹
-rm -rf ../lib
+rm -rf $basepath/../lib
 check_result
 
 # 更新 webpack 配置文件

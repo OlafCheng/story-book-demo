@@ -28,14 +28,14 @@
   ],
   "author": "Youzan Retail FE",
   "description": "这是一个 React 业务组件库的脚手架 demo",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "chalk": "2.1.0",
     "classnames": "^2.2.5",
+    "eslint-config-prettier": "2.6.0",
     "json-templater": "1.1.0",
+    "uglifyjs-webpack-plugin": "1.0.0-beta.3",
     "uppercamelcase": "3.0.0",
-    "webpack-merge": "4.1.0",
-    "uglifyjs-webpack-plugin": "1.0.0-beta.3"
+    "webpack-merge": "4.1.0"
   }
 }

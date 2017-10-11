@@ -5,6 +5,9 @@
     "prettier",
     "prettier/react"
   ],
+  "env": {
+    "jest": true
+  },
   "parser": "babel-eslint",
   "plugins": [
     "lean-imports"
