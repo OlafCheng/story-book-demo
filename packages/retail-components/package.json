@@ -1,5 +1,5 @@
 {
-  "name": "retail-components",
+  "name": "@olafcheng/retail-components",
   "version": "0.1.0",
   "license": "MIT",
   "main": "./lib/index.js",

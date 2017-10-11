@@ -1,4 +1,10 @@
 node_modules/
-
-#logs
+.DS_Store
+lib/
+node_modules/
+node_modules.tar
+npm-debug.log*
+coverage
+packages/*/coverage
+.vscode/
 *.log

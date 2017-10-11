@@ -10,7 +10,8 @@
         ".eslintignore",
         ".gitignore",
         "__tests__/**",
-        "scripts/**"
+        "scripts/**",
+        "*.log"
       ]
     }
   },

@@ -1,6 +1,6 @@
 {
-  "name": "story-book-app",
-  "version": "0.0.1",
+  "name": "@olafcheng/demo-story-book-app",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --content-base ./dist --inline",
