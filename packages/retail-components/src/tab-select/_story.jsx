@@ -2,7 +2,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withInfo, setDefaults } from '@storybook/addon-info';
+import { withInfo } from '@storybook/addon-info';
 
 import TabSelect from './index.tsx';
 
