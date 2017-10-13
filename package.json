@@ -58,13 +58,13 @@
     "tslint-react": "^3.2.0",
     "typescript": "^2.5.2",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^2.8.2",
     "chalk": "2.1.0",
     "cross-env": "5.0.5",
     "eslint-plugin-lean-imports": "0.3.3",
     "shelljs": "0.7.8",
     "uppercamelcase": "3.0.0"
+  },
+  "dependencies": {
   }
 }

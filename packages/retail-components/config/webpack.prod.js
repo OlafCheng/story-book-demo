@@ -1,13 +1,10 @@
 /**
- * 请不要直接在这里修改 webpack 配置文件
- * 这份配置文件是由 ../scripts/update-webpack-config.js 生成的
- * 直接在这里修改会不生效
+ * webpack.prod.js 由 scripts/update-webpack-config.js 生成
+ * 直接修改，无法生效
  */
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const createAlias = require('./createAlias');
-
-console.log(createAlias(path.resolve(__dirname, '../src')));
 
 module.exports = {
   entry: {
