@@ -1,0 +1,22 @@
+{
+  "verbose": true,
+  "collectCoverage": true,
+  "coverageReporters": [
+    "text",
+    "text-summary",
+    "lcov",
+    "html"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "statements": 30,
+      "branches": 30,
+      "functions": 30,
+      "lines": 30
+    }
+  },
+  "timers": "fake",
+  "moduleNameMapper": {
+    "^tab-select(.*)$": "<rootDir>/src/tab-select$1"
+  }
+}
