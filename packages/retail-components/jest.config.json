@@ -16,6 +16,19 @@
     }
   },
   "timers": "fake",
+  "moduleFileExtensions": [
+    "jsx",
+    "ts",
+    "tsx",
+    "js",
+    "json"
+  ],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+  },
+  "testMatch": [
+    "**/__tests__/*.(ts|tsx|jsx|js)"
+  ],
   "moduleNameMapper": {
     "^tab-select(.*)$": "<rootDir>/src/tab-select$1"
   }
