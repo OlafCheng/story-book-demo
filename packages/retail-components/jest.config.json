@@ -1,4 +1,13 @@
 {
+  "globals": {
+    "ts-jest": {
+      "babelConfig": {
+        "presets": [
+          "es2015"
+        ]
+      }
+    }
+  },
   "verbose": true,
   "collectCoverage": true,
   "coverageReporters": [
@@ -17,18 +26,17 @@
   },
   "timers": "fake",
   "moduleFileExtensions": [
-    "jsx",
     "ts",
     "tsx",
     "js",
+    "jsx",
     "json"
   ],
   "transform": {
-    "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    "^.+\\.js?$": "babel-jest",
+    "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
   },
-  "testMatch": [
-    "**/__tests__/*.(ts|tsx|jsx|js)"
-  ],
+  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   "moduleNameMapper": {
     "^tab-select(.*)$": "<rootDir>/src/tab-select$1"
   }
