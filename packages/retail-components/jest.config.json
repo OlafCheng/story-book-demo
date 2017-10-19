@@ -3,7 +3,7 @@
     "ts-jest": {
       "babelConfig": {
         "presets": [
-          "es2015"
+          "env"
         ]
       }
     }
@@ -33,11 +33,12 @@
     "json"
   ],
   "transform": {
-    "^.+\\.js?$": "babel-jest",
+    "^.+\\.(js|jsx)?$": "babel-jest",
     "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
   },
   "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   "moduleNameMapper": {
+    "^hello(.*)$": "<rootDir>/src/hello$1",
     "^tab-select(.*)$": "<rootDir>/src/tab-select$1"
   }
 }

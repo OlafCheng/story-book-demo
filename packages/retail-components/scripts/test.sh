@@ -13,5 +13,5 @@ function check_result {
 node $basepath/update-jest-config.js
 check_result
 
-jest -c $basepath/../jest.config.json --runInBand "$@"
+jest -c $basepath/../jest.config.json "$@"
 check_result
