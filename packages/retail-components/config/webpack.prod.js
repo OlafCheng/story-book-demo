@@ -8,6 +8,7 @@ const createAlias = require('./createAlias');
 
 module.exports = {
   entry: {
+    'hello/index': '/Users/olafcheng/Programs/Note/demos/story-book-app/packages/retail-components/src/hello',
     'tab-select/index': '/Users/olafcheng/Programs/Note/demos/story-book-app/packages/retail-components/src/tab-select'
   },
   output: {

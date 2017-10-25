@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { withInfo } from '@storybook/addon-info';
+import withReadme from 'storybook-readme';
+import Readme from 'docs/tab-select';
 
 import TabSelect from './index.tsx';
 
@@ -27,51 +27,68 @@ const PAIRS = [
 
 storiesOf('Tab Select', module)
   .add(
-    '有默认值-可以取消所有',
-    withInfo('"name" 属性用于给 TabSelect 命名，便于一个页面内用到多个 TabSelect 时，更好处理事件')(() => (
-      <TabSelect
-        name="sort"
-        title="分类："
-        pairs={PAIRS}
-        onChange={() => {}}
-        value="TRADE"
-      />
-    ))
+    'Tab Select',
+    withReadme(
+      Readme,
+      () => (
+        <TabSelect
+          name="sort"
+          title="分类："
+          pairs={PAIRS}
+          onChange={() => {}}
+          value="TRADE"
+        />
+      )
+    )
   )
-  .add(
-    '无默认值-可以取消所有',
-    withInfo('"name" 属性用于给 TabSelect 命名，便于一个页面内用到多个 TabSelect 时，更好处理事件')(() => (
-      <TabSelect name="sort" title="分类：" pairs={PAIRS} onChange={() => {}} />
-    ))
-  )
-  .add(
-    '有默认值-不可以取消所有',
-    withInfo()(() => (
-      <TabSelect
-        title="分类："
-        pairs={PAIRS}
-        onChange={() => {}}
-        value="TRADE"
-        cancle={false}
-      />
-    ))
-  )
-  .add('无默认值-不可以取消所有', () => (
-    <TabSelect
-      title="无默认值："
-      pairs={PAIRS}
-      onChange={() => {}}
-      onClick={action('clicked')}
-      cancle={false}
-    />
-  ))
-  .add('无默认值-不可以取消所有-可多选', () => (
-    <TabSelect
-      title="无默认值："
-      pairs={PAIRS}
-      onChange={() => {}}
-      onClick={action('clicked')}
-      cancle={false}
-      multiple
-    />
-  ));
+
+// storiesOf('Tab Select', module)
+//   .add(
+//     '有默认值-可以取消所有',
+//     withInfo('"name" 属性用于给 TabSelect 命名，便于一个页面内用到多个 TabSelect 时，更好处理事件')(() => (
+//       <TabSelect
+//         name="sort"
+//         title="分类："
+//         pairs={PAIRS}
+//         onChange={() => {}}
+//         value="TRADE"
+//       />
+//     ))
+//   )
+//   .add(
+//     '无默认值-可以取消所有',
+//     withInfo('"name" 属性用于给 TabSelect 命名，便于一个页面内用到多个 TabSelect 时，更好处理事件')(() => (
+//       <TabSelect name="sort" title="分类：" pairs={PAIRS} onChange={() => {}} />
+//     ))
+//   )
+//   .add(
+//     '有默认值-不可以取消所有',
+//     withInfo()(() => (
+//       <TabSelect
+//         title="分类："
+//         pairs={PAIRS}
+//         onChange={() => {}}
+//         value="TRADE"
+//         cancle={false}
+//       />
+//     ))
+//   )
+//   .add('无默认值-不可以取消所有', () => (
+//     <TabSelect
+//       title="无默认值："
+//       pairs={PAIRS}
+//       onChange={() => {}}
+//       onClick={action('clicked')}
+//       cancle={false}
+//     />
+//   ))
+//   .add('无默认值-不可以取消所有-可多选', () => (
+//     <TabSelect
+//       title="无默认值："
+//       pairs={PAIRS}
+//       onChange={() => {}}
+//       onClick={action('clicked')}
+//       cancle={false}
+//       multiple
+//     />
+//   ));
