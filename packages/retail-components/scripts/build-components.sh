@@ -5,13 +5,13 @@ basepath=$(dirname $0)
 
 function check_result {
   if [ $? -ne 0 ]; then
-    echo '命令执行失败';
+    echo '组件构建失败';
     exit -1
   fi
 }
 
 # 删除 lib 文件夹
-rm -rf $basepath/../lib
+rm -rf $basepath/../lib -- !(index.js)
 check_result
 
 # 更新 webpack 配置文件

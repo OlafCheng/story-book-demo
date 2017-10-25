@@ -4,7 +4,7 @@
   "license": "MIT",
   "main": "./lib/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --content-base ./dist --inline",
+    "dev": "npm run storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "node ./scripts/build.js",
@@ -13,7 +13,7 @@
     "lint-ts": "tslint -c tslint.json ./src/**/*.ts",
     "lint-js": "eslint ./src/**/*.js packagges/*/__test__",
     "lint-style": "stylelint ./src/**/*.scss",
-    "build:entry": "node ./scripts/build-entry.js",
+    "build:entry": "node ./scripts/generate-entry.js && ./scripts/build-entry.sh",
     "build:components": "./scripts/build-components.sh"
   },
   "keywords": [

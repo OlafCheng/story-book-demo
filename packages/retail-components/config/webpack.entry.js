@@ -7,12 +7,10 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const createAlias = require('./createAlias');
 
 module.exports = {
-  entry: {
-    'tab-select/index': '/Users/olafcheng/Programs/Note/demos/story-book-app/packages/retail-components/src/tab-select'
-  },
+  entry: path.resolve(__dirname, '../src/index.js'),
   output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, '../lib')
+    path: path.resolve(__dirname, '../lib'),
+    filename: 'index.js'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.jsx', '.js', 'json'],
