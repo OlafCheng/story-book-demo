@@ -27,7 +27,22 @@ const PAIRS = [
 
 storiesOf('Tab Select', module)
   .add(
-    'Tab Select',
+    'default',
+    withReadme(
+      Readme,
+      () => (
+        <TabSelect
+          name="sort"
+          title="分类："
+          pairs={PAIRS}
+          onChange={() => {}}
+          value="TRADE"
+        />
+      )
+    )
+  )
+  .add(
+    '有默认值-可以取消所有',
     withReadme(
       Readme,
       () => (
