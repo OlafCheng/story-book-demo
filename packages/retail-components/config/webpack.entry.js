@@ -1,7 +1,3 @@
-/**
- * webpack.prod.js 由 scripts/update-webpack-config.js 生成
- * 直接修改，无法生效
- */
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const createAlias = require('./createAlias');
