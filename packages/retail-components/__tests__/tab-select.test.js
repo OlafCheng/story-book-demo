@@ -1,5 +1,10 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-15';
+
+import Hello from 'hello';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 import TabSelect from 'tab-select';
 
@@ -22,7 +27,7 @@ const PAIRS = [
   }
 ];
 
-describe('TabSelect', () => {
+describe('test tab-select', () => {
   it('should be rendered', () => {
     const tab = shallow(
       <TabSelect
@@ -32,10 +37,8 @@ describe('TabSelect', () => {
         onChange={() => {}}
       />
     );
-    
-    
 
-    // expect(tab.find('TabSelect').length).toBe(1);
+    expect(tab.find('TabSelect').length).toBe(1);
   });
 
   // it('test', () => {});
