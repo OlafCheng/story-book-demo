@@ -8,6 +8,7 @@ const createAlias = require('./createAlias');
 
 module.exports = {
   entry: {
+    'hello/index': '/Users/olafcheng/Programs/Note/demos/story-book-app/packages/retail-components/src/hello',
     'tab-select/index': '/Users/olafcheng/Programs/Note/demos/story-book-app/packages/retail-components/src/tab-select'
   },
   output: {
@@ -34,7 +35,7 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
         enforce: 'pre',
         use: [
