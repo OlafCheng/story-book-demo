@@ -10,8 +10,8 @@ function check_result {
   fi
 }
 
-# 删除 lib 文件夹
-rm -rf $basepath/../lib -- !(index.js)
+# 删除 lib 的子文件夹
+rm -rf $basepath/../lib/*/
 check_result
 
 # 更新 webpack 配置文件

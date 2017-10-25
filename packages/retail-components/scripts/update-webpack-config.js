@@ -44,7 +44,7 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\\.js$/,
+        test: /\\.jsx$/,
         exclude: /node_modules/,
         enforce: 'pre',
         use: [
