@@ -21,7 +21,6 @@
     "component"
   ],
   "files": [
-    "src/",
     "lib/"
   ],
   "author": "Youzan Retail FE",
