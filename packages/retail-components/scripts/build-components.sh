@@ -13,10 +13,12 @@ function check_result {
 # 删除 lib 的子文件夹
 rm -rf $basepath/../lib/*/
 check_result
+echo 'deleted lib/**'
 
 # 更新 webpack 配置文件
 node $basepath/update-webpack-config.js
 check_result
+echo 'updated config file'
 
 # 构建每个组件对应的 js 文件到 lib
 webpack --config $basepath/../config/webpack.prod.js --progress

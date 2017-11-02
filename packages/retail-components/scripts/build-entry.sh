@@ -11,10 +11,12 @@ function check_result {
 }
 
 # 删除旧的 lib/index.js
+echo '1'
 rm -rf $path/../lib/index.js
 check_result
 
 # 构建入口文件
+echo '2'
 webpack --config $basepath/../config/webpack.entry.js --progress
 check_result
 

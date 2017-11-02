@@ -2,4 +2,4 @@
 
 lerna clean --yes
 
-cd packages/retail-components && yarn && yarn build
+cd packages/retail-components && npm install  && npm run build

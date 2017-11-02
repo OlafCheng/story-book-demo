@@ -25,10 +25,11 @@
   ],
   "author": "Youzan Retail FE",
   "description": "这是一个 React 业务组件库的脚手架 demo",
-  "dependencies": {},
-  "peerDependencies": {
+  "dependencies": {
     "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "peerDependencies": {
     "@storybook/addons": "^3.0.0-alpha.0"
   },
   "devDependencies": {
